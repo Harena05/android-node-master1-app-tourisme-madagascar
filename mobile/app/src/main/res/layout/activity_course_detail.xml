@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".menu.view.detail.MadaDetailActivity">
+
+   <com.google.android.youtube.player.YouTubePlayerView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/ytPlayer"
+        app:layout_constraintTop_toTopOf="parent"/>
+
+<ScrollView
+    android:layout_width="match_parent"
+    android:layout_height="0dp"
+
+    app:layout_constraintTop_toBottomOf="@+id/ytPlayer"
+    android:contentDescription="images"
+    app:layout_constraintBottom_toBottomOf="parent"
+    app:layout_constraintEnd_toEndOf="parent"
+    app:layout_constraintStart_toStartOf="parent"
+
+    app:layout_constraintVertical_bias="0.0">
+   <LinearLayout
+       android:layout_width="match_parent"
+       android:layout_height="wrap_content"
+       android:orientation="vertical"
+       app:layout_constraintEnd_toEndOf="parent"
+       app:layout_constraintStart_toStartOf="parent"
+       >
+
+      <TextView
+          android:textColor="@color/primary"
+          android:id="@+id/txtTitle"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:layout_marginStart="64dp"
+          android:layout_marginTop="32dp"
+          android:text="exempleTitre"
+          android:textAppearance="?android:attr/textAppearanceLarge"
+          app:layout_constraintStart_toStartOf="parent"
+          app:layout_constraintTop_toBottomOf="@+id/ytPlayer" />
+
+      <TextView
+          android:id="@+id/txtDescription"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:layout_marginTop="16dp"
+          android:padding="16dp"
+          android:text=" Nulla ac porta velit, sed consectetur nisi. Proin dapibus mollis diam nec malesuada. Sed ut tempus massa. Integer malesuada quis metus et viverra. Sed ac mollis tortor, nec elementum lorem. Pellentesque nisl est, vestibulum a dictum sit amet, fermentum volutpat dui. Vivamus ullamcorper, quam id dapibus mattis, dui ante tempus elit, in bibendum nulla tellus at libero. Maecenas quis sodales urna, eget euismod purus. Phasellus dapibus in metus sed tincidunt. Duis luctus ut sem egestas lacinia. Nunc at sagittis neque. Integer sapien quam, eleifend ut interdum at, luctus vitae massa. "
+          app:layout_constraintStart_toStartOf="parent"
+          app:layout_constraintTop_toBottomOf="@+id/txtTitle" />
+      <LinearLayout
+          android:minHeight="64dp"
+
+          android:background="@color/primary"
+          android:id="@+id/imgContainer"
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:orientation="vertical">
+
+         <TextView
+             android:textColor="@color/white"
+             android:layout_width="match_parent"
+             android:layout_height="wrap_content"
+             android:layout_marginStart="16dp"
+             android:text="Figures:"></TextView>
+
+      </LinearLayout>
+   </LinearLayout>
+
+   </ScrollView>
+
+
+   <!--
+      <androidx.fragment.app.FragmentContainerView
+           android:id="@+id/ytPlayer"
+           android:name="com.google.android.youtube.player.YouTubePlayerSupportFragmentX"
+           android:layout_width="match_parent"
+           android:layout_height="wrap_content"
+           app:layout_constraintTop_toTopOf="parent"></androidx.fragment.app.FragmentContainerView>
+   -->
+<!--
+   <androidx.fragment.app.FragmentContainerView
+     android:name="itu.master1.projetandroid.menu.view.detail.MadaDetailFragment     android:layout_width="match_parent"
+     android:layout_height="match_parent"
+     android:id="@+id/id_frag_course_detail">
+   </androidx.fragment.app.FragmentContainerView>
+-->
+</androidx.constraintlayout.widget.ConstraintLayout>

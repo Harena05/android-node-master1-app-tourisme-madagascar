@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+    <ListPreference
+        app:icon="@drawable/frequency"
+        android:key="freq_list"
+        android:summary="Choisissez la fréquence des notifications"
+        android:title="Fréquence">
+
+    </ListPreference>
+    <SwitchPreferenceCompat
+        
+        app:icon="@drawable/notifications"
+        app:key="notifications"
+        app:title="Activer les notifications"/>
+
+    <Preference
+        app:icon="@drawable/email"
+        app:key="feedback"
+        app:title="Envoyer des rapports"
+        app:summary="Envoyer des rapports ou suggérer de nouvelles fonctionnalités"/>
+
+</PreferenceScreen>
